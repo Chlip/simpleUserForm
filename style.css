@@ -1,0 +1,25 @@
+/* Hide Arrows From Input Number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+
+body {
+  background: #ff3300;
+  background: linear-gradient(to right, #ff4912, #33AEFF);
+}

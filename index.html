@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d142473e40.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column">
+    <div id="page-content">
+
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-white-50 p-3 bg-dark text-light mb-5">
+                <span class="navbar-brand mb-0 h1">User Form <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+            </nav>
+        </header>
+        <!-- header -->
+
+        <!-- user form -->
+        <div class="container  my-5 py-5 bg-light text-dark rounded-3">
+            <h4 class="text-center">Wprowadź swoje dane osobowe</h4>
+            <form id="userForm" class="m-5 pb-5 needs-validation">
+                <div class="form-group row py-2 has-validation">
+                    <label for="inputName" class="col-sm-2 col-form-label">Imię</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control " id="inputName"
+                            placeholder="Wprowadź imię (max 20 znaków)...">
+                        <div id="nameFeedback" class="invalid-feedback">
+                            Wprowadź imię (max 20 znaków)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row py-2 needs-validation">
+                    <label for="inputSurname" class="col-sm-2 col-form-label">Nazwisko</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control " id="inputSurname"
+                            placeholder="Wprowadź nazwisko (max 30 znaków)...">
+                        <div id="surnameFeedback" class="invalid-feedback">
+                            Wprowadź nazwisko (max 30 znaków)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row py-2 PersonalID needs-validation">
+                    <label for="inputPESEL" class="col-sm-2 col-form-label">PESEL</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control " id="inputPESEL" placeholder="PESEL...">
+                        <div class="invalid-feedback">
+                            Wprowadź poprawny numer PESEL
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row py-2">
+                    <label for="bday" class="col-sm-2 col-form-label">Data Urodzenia</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="bday" readonly>
+                    </div>
+                </div>
+                <div class="form-group row pt-2">
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-secondary text-light mt-5 py-3 px-5">Wyślij</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- user form -->
+        
+    </div>
+    
+
+    <!-- footer -->
+    <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Maciej Bialas &copy;</small>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- form script -->
+    <script type="module" src="./formHandler.js"></script>
+</body>
+
+</html>
